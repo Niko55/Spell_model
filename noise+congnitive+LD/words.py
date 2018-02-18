@@ -28,7 +28,8 @@ def LD(s, t):
                LD(s, t[:-1])+1, 
                LD(s[:-1], t[:-1]) + cost])
     return res
-'''
+#this is the case for if the start letter is same
+'''  
 def word_ret(word, dic_list):
     wl = list(word)
     dic_ret = [w for w in dic_list if w.startswith(wl[0])]
@@ -38,6 +39,7 @@ def word_ret(word, dic_list):
             dic1_ret.append(dic_ret[i])
     return dic1_ret
 '''
+##following is the case when we take length of +1/-1 and then use edit distance of 1 and 2
 def word_ret(word, dic_list):
     l = len(word)
     dic_ret = []
