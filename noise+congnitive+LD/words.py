@@ -46,10 +46,9 @@ def word_ret(word, dic_list):
         if len(w) == l+1 or len(w) == l-1:
             dic_ret.append(w)
     for i in dic_ret:
-        if LD(word, i) == 1:
+        if LD(word, i) == 1 or LD(word, i) == 2:
             dic_ret1.append(i)
     return dic_ret1
-            
 
 if __name__ == "__main__":
     word = input("Enter a word: ")
